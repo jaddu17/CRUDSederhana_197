@@ -135,7 +135,7 @@
             this.Tambah.TabIndex = 10;
             this.Tambah.Text = "Tambah\r\n";
             this.Tambah.UseVisualStyleBackColor = true;
-            this.Tambah.Click += new System.EventHandler(this.Tambah_Click);
+            this.Tambah.Click += new System.EventHandler(this.btnTambah_Click);
             // 
             // Hapus
             // 
@@ -155,7 +155,7 @@
             this.Ubah.TabIndex = 12;
             this.Ubah.Text = "Ubah";
             this.Ubah.UseVisualStyleBackColor = true;
-            this.Ubah.Click += new System.EventHandler(this.button2_Click);
+            this.Ubah.Click += new System.EventHandler(this.btnUbah_Click);
             // 
             // Refresh
             // 
@@ -165,6 +165,7 @@
             this.Refresh.TabIndex = 13;
             this.Refresh.Text = "Refresh";
             this.Refresh.UseVisualStyleBackColor = true;
+            this.Refresh.Click += new System.EventHandler(this.Refresh_Click);
             // 
             // dgvMahasiswa
             // 
