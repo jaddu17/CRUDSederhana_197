@@ -200,7 +200,7 @@ namespace CRUDSederhana
         // Fungsi untuk merefresh tampilan DataGridView
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-
+            LoadData();
         }
         private void label3_Click(object sender, EventArgs e)
         {
