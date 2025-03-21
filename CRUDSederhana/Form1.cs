@@ -157,7 +157,10 @@ namespace CRUDSederhana
         // Fungsi untuk mengubah data (UPDATE)
         private void btnUbah_Click(object sender, EventArgs e)
         {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
 
+            }
         }
         private void label3_Click(object sender, EventArgs e)
         {
