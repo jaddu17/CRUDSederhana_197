@@ -70,7 +70,11 @@ namespace CRUDSederhana
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
-
+                try
+                {
+                    if (txtNIM.Text == "" || txtNama.Text == "" || txtEmail.Text == "" || txtTelepon.Text == "")
+                   
+                }
             }
         }
         private void label3_Click(object sender, EventArgs e)
