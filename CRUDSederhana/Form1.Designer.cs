@@ -145,6 +145,7 @@
             this.Hapus.TabIndex = 11;
             this.Hapus.Text = "Hapus";
             this.Hapus.UseVisualStyleBackColor = true;
+            this.Hapus.Click += new System.EventHandler(this.Hapus_Click);
             // 
             // Ubah
             // 
