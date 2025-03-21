@@ -52,6 +52,8 @@ namespace CRUDSederhana
                     SqlDataAdapter da = new SqlDataAdapter(query, conn);
                     DataTable dt = new DataTable();
                     da.Fill(dt);
+
+                    dgvMahasiswa.AutoGenerateColumns = true;
                 }
             }
         }
