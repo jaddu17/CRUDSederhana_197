@@ -45,7 +45,10 @@ namespace CRUDSederhana
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
-
+                try
+                {
+                    conn.Open();
+                }
             }
         }
         private void label3_Click(object sender, EventArgs e)
