@@ -153,6 +153,12 @@ namespace CRUDSederhana
                 MessageBox.Show("Pilih data yang akan dihapus!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        // Fungsi untuk mengubah data (UPDATE)
+        private void btnUbah_Click(object sender, EventArgs e)
+        {
+
+        }
         private void label3_Click(object sender, EventArgs e)
         {
 
