@@ -171,7 +171,11 @@ namespace CRUDSederhana
 
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
-
+                        cmd.Parameters.AddWithValue("@NIM", txtNIM.Text.Trim());
+                        cmd.Parameters.AddWithValue("@Nama", txtNama.Text.Trim());
+                        cmd.Parameters.AddWithValue("@Email", txtEmail.Text.Trim());
+                        cmd.Parameters.AddWithValue("@Telepon", txtTelepon.Text.Trim());
+                        cmd.Parameters.AddWithValue("@Alamat", txtAlamat.Text.Trim());
                     }
                 }
             }
