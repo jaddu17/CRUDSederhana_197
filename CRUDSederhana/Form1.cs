@@ -20,6 +20,12 @@ namespace CRUDSederhana
             InitializeComponent();
         }
 
+        // Event saat form pertama kali dimuat
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
         private void label3_Click(object sender, EventArgs e)
         {
 
