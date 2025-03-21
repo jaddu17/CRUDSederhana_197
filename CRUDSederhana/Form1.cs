@@ -174,7 +174,10 @@ namespace CRUDSederhana
         // Fungsi untuk menambahkan data (CREATE)
         private void btnTambah_Click(object sender, EventArgs e)
         {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
 
+            }
         }
     }
 }
