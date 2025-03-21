@@ -177,13 +177,10 @@ namespace CRUDSederhana
                         MessageBox.Show("Harap isi semua data!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
-                    
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error: " + ex.Message, "Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-        }
+                    conn.Open();
+                    string query = "INSERT INTO Mahasiswa (NIM, Nama, Email, Telepon, Alamat) VALUES (@NIM, @Nama, @Email, @Telepon, @Alamat)";
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        
     }
 }
