@@ -100,6 +100,10 @@ namespace CRUDSederhana
                         }
                     }
                 }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message, "Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
         private void label3_Click(object sender, EventArgs e)
