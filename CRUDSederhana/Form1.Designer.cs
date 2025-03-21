@@ -165,7 +165,7 @@
             this.Refresh.TabIndex = 13;
             this.Refresh.Text = "Refresh";
             this.Refresh.UseVisualStyleBackColor = true;
-            this.Refresh.Click += new System.EventHandler(this.Refresh_Click);
+            this.Refresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // dgvMahasiswa
             // 
