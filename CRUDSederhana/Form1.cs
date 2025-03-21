@@ -58,6 +58,10 @@ namespace CRUDSederhana
 
                     ClearForm(); // Auto Clear setelah LoadData
                 }
+                catch (Exception ex)
+                {
+                    
+                }
             }
         }
         private void label3_Click(object sender, EventArgs e)
