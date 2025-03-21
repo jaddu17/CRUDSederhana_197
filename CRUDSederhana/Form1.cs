@@ -168,6 +168,22 @@ namespace CRUDSederhana
 
         private void Tambah_Click(object sender, EventArgs e)
         {
-            
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    if (txtNIM.Text == "" || txtNama.Text == "" || txtEmail.Text == "" || txtTelepon.Text == "")
+                    {
+                        MessageBox.Show("Harap isi semua data!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                    
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message, "Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
     }
 }
