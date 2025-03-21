@@ -110,7 +110,10 @@ namespace CRUDSederhana
         //Fungsi untuk menghapus data (DELETE)
         private void btnHapus_Click(object sender, EventArgs e)
         {
+            if (dgvMahasiswa.SelectedRows.Count > 0)
+            {
 
+            }
         }
         private void label3_Click(object sender, EventArgs e)
         {
