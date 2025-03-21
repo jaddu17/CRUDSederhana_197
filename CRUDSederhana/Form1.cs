@@ -34,6 +34,9 @@ namespace CRUDSederhana
             txtEmail.Clear();
             txtTelepon.Clear();
             txtAlamat.Clear();
+
+            //Fokus kembali ke NIM agar user siap memasukkan data baru
+            txtNIM.Focus();
         }
 
 
