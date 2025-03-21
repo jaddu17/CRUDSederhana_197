@@ -135,6 +135,7 @@
             this.Tambah.TabIndex = 10;
             this.Tambah.Text = "Tambah\r\n";
             this.Tambah.UseVisualStyleBackColor = true;
+            this.Tambah.Click += new System.EventHandler(this.Tambah_Click);
             // 
             // Hapus
             // 

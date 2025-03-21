@@ -65,48 +65,6 @@ namespace CRUDSederhana
             }
         }
 
-        // Fungsi untuk menambahkan data(CREATE)
-        private void btnTambah_Click(object sender, EventArgs e)
-        {
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                try
-                {
-                    if (txtNIM.Text == "" || txtNama.Text == "" || txtEmail.Text == "" || txtTelepon.Text == "")
-                    {
-                        MessageBox.Show("Harap isi semua data!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
-                    }
-                    conn.Open();
-                    string query = "INSERT INTO Mahasiswa (NIM, Nama, Email, Telepon, Alamat) VALUES (@NIM, @Nama, @Email, @Telepon, @Alamat)";
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@NIM", txtNIM.Text.Trim());
-                        cmd.Parameters.AddWithValue("@Nama", txtNama.Text.Trim());
-                        cmd.Parameters.AddWithValue("@Email", txtEmail.Text.Trim());
-                        cmd.Parameters.AddWithValue("@Telepon", txtTelepon.Text.Trim());
-                        cmd.Parameters.AddWithValue("@Alamat", txtAlamat.Text.Trim());
-
-                        int rowsAffected = cmd.ExecuteNonQuery();
-                        if (rowsAffected > 0)
-                        {
-                            MessageBox.Show("Data berhasil ditambahkan!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            LoadData();
-                            ClearForm(); // Auto Clear setelah tambah data
-                        }
-                        else
-                        {
-                            MessageBox.Show("Data tidak berhasil ditambahkan!", "Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error: " + ex.Message, "Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-        }
-
         //Fungsi untuk menghapus data (DELETE)
         private void btnHapus_Click(object sender, EventArgs e)
         {
@@ -198,10 +156,6 @@ namespace CRUDSederhana
         }
 
         // Fungsi untuk merefresh tampilan DataGridView
-        private void btnRefresh_Click(object sender, EventArgs e)
-        {
-            LoadData();
-        }
         private void label3_Click(object sender, EventArgs e)
         {
 
@@ -211,5 +165,9 @@ namespace CRUDSederhana
         {
 
         }
+
+        private void Tambah_Click(object sender, EventArgs e)
+        {
+            
     }
 }
